@@ -11,6 +11,7 @@ type Payload = {
   username: ? string;
   text: ? string;
   'icon_emoji': ? string;
+  link_names: ? boolean;
 };
 
 class Slack {
