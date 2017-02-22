@@ -35,7 +35,8 @@ class Slack {
     text: string = '<text is empty>',
     channel: string = '#general',
     username: string = 'bot',
-    emoji: string = ':iphone:'
+    emoji: string = ':iphone:',
+    link_names: boolean = false
   ): Promise {
 
     if (!this.webhookURL) {
@@ -46,7 +47,8 @@ class Slack {
       text,
       channel,
       username,
-      'icon_emoji' : emoji
+      'icon_emoji' : emoji,
+      link_names
     };
 
     const body = `payload=${encodeURI(JSON.stringify(payload))}`;
